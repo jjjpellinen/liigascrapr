@@ -1,5 +1,5 @@
 # liigascrapr
-Hae R:llä Liigan sivuillaan tarjoamaa dataa. Ottelukohtaiset pelaajatilastot, laukaisukartat ja joukkuedataa.
+Hae R:llä Liigan sivuillaan tarjoamaa dataa. Ottelukohtaiset pelaajatilastot, laukaisukartat ja joukkuedataa. Ei sisällä vielä mitään.
 
 Työkalu Liigan tilastoanalyysin aloittamiseen. 
 

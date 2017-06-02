@@ -1,0 +1,70 @@
+Ohje
+
+-1) 
+Jos tiedät R:n, täällä ei ole mitään nähtävää. Ota koodit työkansioon, ja etene haluamaasi tapaan.
+
+0)
+Jos et ole koskaan R:ää käyttänyt...
+	Asenna R ja halutessasi myös RStudio, jos haluat jatkaa R-puuhastelua. Ovat ilmaisia.
+	https://www.r-project.org/
+	https://www.rstudio.com/products/rstudio/download/
+	RStudion etuna mm. editori, joka ilmoittelee kun teet virheitä.
+	Ja putkioperaattorin %>% saa näppäinyhdistelmällä ctrl+shift+m (tämä parantaa elämänlaatua)
+	Asenna ohjeiden mukaan.
+
+1)
+Kopioi koodit 
+	- funktiot.r
+	- pelaajadata.r
+haluamaasi työkansioon
+
+2)
+Avaa R ja aseta kyseinen kansio työhakemistoksi. 
+Kirjoita konsoliin
+setwd("C:/polku/sinne/kansioon")
+ja paina enteriä.
+Huom: polku heittomerkkeihin ja ei backslasheja \.
+
+3)
+Kokeile, että se toimii: kirjoittaa konsoliin vaikka 1 + 1 tai 
+print("Hello darkness my old friend, I've come to play some chess with you again")
+funktioille saa ohjeita kirjoittamalla kysymysmerkin avulla
+Kirjoita konsoliin esimerkiksi
+?mean
+ja paina enteriä
+
+4)
+Avaa pelaajadata.r: 
+	Rstudiossa klikkaile valikoista file > open file > ...
+	Perus R: klikkaile valikoista file > open script > ...
+
+5)
+Nyt sinulla pitäisi olla auki koodi editorissa ja alempana konsoli. 
+Koodia voi ajella editorissa riveittäin komennolla ctrl+r.
+Konsolissa näkyy mitä tapahtuu.
+Aja aluksi 1. rivi, joka alkaa sourcella.
+Siinä otetaan käyttöön funktiot toisesta koodista.
+
+6)
+Kirjastot pitää asentaa ennen kuin ryhtyy hakemaan mitään.
+Jos sinulla nuo kirjastot jo on, niin jatka ajelemaan library-rivejä.
+Ota install.packages -rivit pois kommenteista ja ajele ne. 
+Rstudiossa pakettien pitäisi asentua huoletta. 
+Normiärrässä aukeaa ikkuna, josta pitää valita joku CRAN-mirror. Valitse joku, vaikkapa sweden ja klikkaa ok.
+
+7)
+Ajele libraryt käyttöön ja rivillä 18 oleva funktio pelaajahaku() hakee pelaajadatan ja se tallentuu olioon 
+pelaajadata. Omalla koneella hakuun menee vajaa 30min. 
+Parilla seuraavalla rivillä otetaan pelaajien ja maalivahtien tilastot ja write_csv kirjoittaa 
+ne csv-muotoon ja tallentaa ne alussa määriteltyyn työhakemistoon, jos mitta on R:n kanssa täynnä tässä vaiheessa.
+Niitä voi käsitellä vaikka excelillä tai google sheetsillä.
+save() -rivi tallentaa datasetit R:n workspacena työhakemistoon. 
+Ne voi myöhemmin ladata load("C:/polku/tiedostoon/pelaajat.RData") 
+
+8)
+Tein loppuun esimerkkejä datojen käsittelystä dplyr-kirjaston työkaluilla. 
+Viimeisten rivien View-komennot avaavat datasetit R:n tai RStudion selailuikkunaan. 
+Rivillä 43 oleva kommentoitu komento ryhmittelee pelaajat myös kauden perusteella. 
+Jos haluat tarkastella pelaajakausia, ota kommenttimerkki # pois riviltä 43 ja siirrä se rivin 42 alkuun
+RStudion View-ikkunassa dataa voi järjestellä sarakkeittain klikkailemalla sarakkeiden nimiä. 
+Voit esimerkiksi järjestellä maalit / 60min perusteella.
